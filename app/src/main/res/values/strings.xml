@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Popular Movies Stage 1</string>
+    <string name="popularMoviesTitle">Popular Movies</string>
+    <string name="topRatedTitle">Top Rated Movies</string>
+    <string name="favoriteMoviesTitle">Favorite Movies</string>
+    <string name="sort">Popular Movies Sort</string>
+    <string name="Error">No Internet Connection</string>
+    <string name="noReviews">No Reviews yet   :( </string>
+    <string name="API">2bfc2845a8e711f212828a7f8d23d3a7</string>
+    <string name="popularity">Popular</string>
+    <string name="toprated">Top Rated</string>
+    <string name="favorites">Favorites</string>
+    <string name="MovieDB_URL">"http://api.themoviedb.org/3/movie/popular?api_key="</string>
+    <string name="MovieDB_URL2">"http://api.themoviedb.org/3/movie/top_rated?api_key="</string>
+
+
+    <string name="TABLE_NAME">favMoviesList1</string>
+    <string name="TITLE">"title_DB"</string>
+    <string name="POSTER_ID">poster_DB</string>
+    <string name="RELEASE_DATE">"release_DB"</string>
+    <string name="RATING">rating_DB</string>
+    <string name="OVERVIEW">"overview_DB"</string>
+    <string name="pref">"favMoviesLikes_Data"</string>
+    <string name="added">" is added to favourites"</string>
+    <string name="removed">" is removed from favourites"</string>
+    <string name="youtube">https://www.youtube.com/watch?v=</string>
+    <string name="glide">"https://image.tmdb.org/t/p/w185/"</string>
+
+
+    <string-array name="spinner_list_item_array">
+        <item>Sort By</item>
+        <item>Top Rated</item>
+        <item>Popular</item>
+        <item>Favorites</item>
+
+    </string-array>
+
+    <string name="base_start">http://api.themoviedb.org/3/movie/</string>
+    <string name="base_end">/videos?api_key=</string>
+    <string name="reviews_base_end">/reviews?api_key=</string>
+
+
+</resources>
+
