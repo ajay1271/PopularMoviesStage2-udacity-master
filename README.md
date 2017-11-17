@@ -1,1 +1,1 @@
-UDACITY PROJECT-1 For Android developer Nanodegree course.
+UDACITY PROJECT-2 For Android developer Nanodegree course.
