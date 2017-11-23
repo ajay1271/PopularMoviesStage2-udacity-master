@@ -296,6 +296,8 @@ public class DetailsActivity extends AppCompatActivity {
                     fav.setImageResource(R.drawable.fav_off);
                     getContentResolver().delete(uri, null, null);
 
+
+
                     Toast.makeText(DetailsActivity.this, pm.databasetoString() + getString(R.string.removed), Toast.LENGTH_SHORT).show();
 
 
@@ -319,22 +321,6 @@ public class DetailsActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-    @Override
-    public void onBackPressed() {
-
-
-        Toast.makeText(this,"Back Button is Pressed",Toast.LENGTH_SHORT).show();
-        Intent i = new Intent(this,FavoritesActivity.class);
-
-        startActivity(i);
-
-        finish();
-        super.onBackPressed();
-
-    }
-
 
 }
 
