@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,12 +21,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailsActivity"
+            android:name=".UI.DetailsActivity"
             android:theme="@style/NoActionBarAppTheme"
 
              />
-        <activity android:name=".DetailsofFavoriteMovies" />
-        <activity android:name=".Favorites" />
+        <activity
+            android:name=".UI.FavoritesActivity"
+
+
+            />
+
+        <provider
+            android:name="com.cavepass.popularmoviesstage1.Data.TaskContentProvider"
+            android:authorities="com.cavepass.popularmoviesstage1"
+            android:exported="false" />
     </application>
+
 
 </manifest>

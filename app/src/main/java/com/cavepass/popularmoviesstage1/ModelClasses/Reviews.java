@@ -1,30 +1,30 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.ModelClasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class ReviewsAPI implements Parcelable {
-    public static final Creator<ReviewsAPI> CREATOR = new Creator<ReviewsAPI>() {
+public class Reviews implements Parcelable {
+    public static final Creator<Reviews> CREATOR = new Creator<Reviews>() {
         @Override
-        public ReviewsAPI createFromParcel(Parcel source) {
-            ReviewsAPI var = new ReviewsAPI();
+        public Reviews createFromParcel(Parcel source) {
+            Reviews var = new Reviews();
             var.id = source.readInt();
             var.page = source.readInt();
             var.total_pages = source.readInt();
-            var.results = source.createTypedArray(ReviewsAPIResults.CREATOR);
+            var.results = source.createTypedArray(ReviewsResults.CREATOR);
             var.total_results = source.readInt();
             return var;
         }
 
         @Override
-        public ReviewsAPI[] newArray(int size) {
-            return new ReviewsAPI[size];
+        public Reviews[] newArray(int size) {
+            return new Reviews[size];
         }
     };
     private int id;
     private int page;
     private int total_pages;
-    private ReviewsAPIResults[] results;
+    private ReviewsResults[] results;
     private int total_results;
 
     public int getId() {
@@ -51,11 +51,11 @@ public class ReviewsAPI implements Parcelable {
         this.total_pages = total_pages;
     }
 
-    public ReviewsAPIResults[] getResults() {
+    public ReviewsResults[] getResults() {
         return this.results;
     }
 
-    public void setResults(ReviewsAPIResults[] results) {
+    public void setResults(ReviewsResults[] results) {
         this.results = results;
     }
 

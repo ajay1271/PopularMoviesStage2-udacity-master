@@ -1,23 +1,21 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.Adapters;
 
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.cavepass.popularmoviesstage1.ModelClasses.MovieDetails;
+import com.cavepass.popularmoviesstage1.R;
+import com.cavepass.popularmoviesstage1.UI.DetailsActivity;
 
 
 import java.util.ArrayList;
@@ -45,6 +43,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
                     Intent i = new Intent(context,DetailsActivity.class);
 
                     i.putExtra("movieObject",movies.get((getLayoutPosition())));
+                    i.putExtra("id",getLayoutPosition());
 
                     context.startActivity(i);
 

@@ -1,17 +1,15 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.Adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.cavepass.popularmoviesstage1.R;
 
 import java.util.ArrayList;
 
@@ -26,15 +24,15 @@ public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.MyView
 
     int dataSize;
     Context mContext;
-    ArrayList<TrailersClassResults> id;
+    ArrayList<String> ar;
 
 
 
 
-    public TrailersAdapter(Context context,ArrayList<TrailersClassResults> id) {
+    public TrailersAdapter(Context context,ArrayList<String> ar) {
 
-        this.id=id;
-        this.dataSize=dataSize;
+        this.ar=ar;
+
         mContext =context;
 
     }
@@ -71,14 +69,19 @@ public class TrailersAdapter extends RecyclerView.Adapter<TrailersAdapter.MyView
     @Override
     public void onBindViewHolder(TrailersAdapter.MyViewHolder holder, int position) {
 
-        Glide.with(mContext).load("https://img.youtube.com/vi/ePbKGoIGAXY" +
-                id.get(position).getKey()+"/0.jpg").diskCacheStrategy( DiskCacheStrategy.RESULT).dontAnimate().into(holder.thumbnail);
+        Log.e("Size" , ar.size()+"");
+
+        Glide.with(mContext).load("https://img.youtube.com/vi/" +
+                ar.get(position)+"/0.jpg").dontAnimate().into(holder.thumbnail);
+
+        Log.e("Image","https://img.youtube.com/vi/" +
+                ar.get(position)+"/0.jpg");
 
     }
 
     @Override
     public int getItemCount() {
-        return id.size();
+        return ar.size();
     }
 
 

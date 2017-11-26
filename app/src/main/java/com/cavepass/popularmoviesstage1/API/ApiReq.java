@@ -1,4 +1,4 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.API;
 
 /**
  * Created by Ajay on 16-11-2017.

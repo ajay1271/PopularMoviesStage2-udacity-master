@@ -1,16 +1,14 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.Adapters;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
+
+import com.cavepass.popularmoviesstage1.ModelClasses.ReviewsResults;
+import com.cavepass.popularmoviesstage1.R;
 
 import java.util.ArrayList;
 
@@ -22,12 +20,12 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsAdapter.MyViewHo
 
     Context context;
 
-    ArrayList<ReviewsClassJsonResults> arrayReview;
-
-    ReviewsClass reviewsClass;
+    ArrayList<ReviewsResults> arrayReview;
 
 
-    public ReviewsAdapter(Context context, ArrayList<ReviewsClassJsonResults> ar) {
+
+
+    public ReviewsAdapter(Context context, ArrayList<ReviewsResults> ar) {
         this.context = context;
         arrayReview = ar;
     }

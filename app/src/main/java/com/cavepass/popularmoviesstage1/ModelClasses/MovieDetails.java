@@ -1,4 +1,4 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.ModelClasses;
 
 import com.google.gson.annotations.SerializedName;
 

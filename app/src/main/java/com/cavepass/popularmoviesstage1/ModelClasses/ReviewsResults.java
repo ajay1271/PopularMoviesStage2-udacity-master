@@ -1,13 +1,13 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.ModelClasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class ReviewsAPIResults implements Parcelable {
-    public static final Creator<ReviewsAPIResults> CREATOR = new Creator<ReviewsAPIResults>() {
+public class ReviewsResults implements Parcelable {
+    public static final Creator<ReviewsResults> CREATOR = new Creator<ReviewsResults>() {
         @Override
-        public ReviewsAPIResults createFromParcel(Parcel source) {
-            ReviewsAPIResults var = new ReviewsAPIResults();
+        public ReviewsResults createFromParcel(Parcel source) {
+            ReviewsResults var = new ReviewsResults();
             var.author = source.readString();
             var.id = source.readString();
             var.content = source.readString();
@@ -16,8 +16,8 @@ public class ReviewsAPIResults implements Parcelable {
         }
 
         @Override
-        public ReviewsAPIResults[] newArray(int size) {
-            return new ReviewsAPIResults[size];
+        public ReviewsResults[] newArray(int size) {
+            return new ReviewsResults[size];
         }
     };
     private String author;

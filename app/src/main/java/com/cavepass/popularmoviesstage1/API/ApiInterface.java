@@ -1,12 +1,15 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.API;
 
 /**
  * Created by Ajay on 15-11-2017.
  */
 
+import com.cavepass.popularmoviesstage1.ModelClasses.ApiResponce;
+import com.cavepass.popularmoviesstage1.ModelClasses.Reviews;
+import com.cavepass.popularmoviesstage1.ModelClasses.TrailersClass;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.PATCH;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -22,8 +25,8 @@ public interface ApiInterface {
     Call<ApiResponce> getPopularMovies(@Query("api_key") String apiKey);
 
     @GET("movie/{id}/reviews")
-    Call<ReviewsClassJson> getReviews(@Path("id") String id, @Query("api_key") String apiKey);
+    Call<Reviews> getReviews(@Path("id") String id, @Query("api_key") String apiKey);
 
     @GET("movie/{id}/videos")
-    Call<TrailersClass> getTrailers(@Path("id") String id,@Query("api_key") String apiKey);
+    Call<TrailersClass> getTrailers(@Path("id") String id, @Query("api_key") String apiKey);
 }

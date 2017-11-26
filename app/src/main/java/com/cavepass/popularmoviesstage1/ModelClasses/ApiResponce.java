@@ -1,4 +1,4 @@
-package com.cavepass.popularmoviesstage1;
+package com.cavepass.popularmoviesstage1.ModelClasses;
 
 /**
  * Created by Ajay on 15-11-2017.
